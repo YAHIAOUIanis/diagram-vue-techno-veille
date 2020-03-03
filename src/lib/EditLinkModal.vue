@@ -4,18 +4,18 @@
       <div class="form" v-if="isActive">
         <VInput v-model="newLink.color" placeholder="color" /><br />
         <VSelect v-model="newLink.pattern" placeholder="Select line pattern">
-          <option value="solid" selected>Solid</option>
-          <option value="dash">Dash</option>
-          <option value="dot">Dot</option> </VSelect
+          <option value="solid" selected>Solide</option>
+          <option value="dash">Tiret</option>
+          <option value="dot">Pointillé</option> </VSelect
         ><br />
         <VSelect v-model="newLink.arrow" placeholder="Select arrow type">
-          <option value="none">none</option>
-          <option value="src">One side(source)</option>
-          <option value="dest">One side(destination)</option>
-          <option value="both">Both side</option> </VSelect
+          <option value="none"></option>
+          <option value="src">Du côté source</option>
+          <option value="dest">Du côté destination</option>
+          <option value="both">Deux côtés</option> </VSelect
         ><br />
         <VButton @click="ok">OK</VButton>
-        <VButton class="danger" @click="cancel">Cancel</VButton>
+        <VButton class="danger" @click="cancel">Annuler</VButton>
       </div>
     </transition>
   </VModal>

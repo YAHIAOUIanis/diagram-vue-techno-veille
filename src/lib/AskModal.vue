@@ -4,7 +4,7 @@
       <div class="block">
         <div class="inner-block"><slot></slot></div>
         <VButton @click="ok">OK</VButton>
-        <VButton class="danger" @click="cancel">Cancel</VButton>
+        <VButton class="danger" @click="cancel">Annuler</VButton>
       </div>
     </transition>
   </VModal>

@@ -38,18 +38,18 @@
       :height="graphData.height || 1000"
       :fluid="isFluid"
       :scale="scale"
-      :background="graphData.background || '#fafafa'"
+      :background="graphData.background || 'black'"
       :nodes="graphData.nodes"
       :links="graphData.links"
       :editable="editable"
       :labels="
         graphData.labels || {
-          edit: 'Edit',
-          remove: 'Remove',
-          link: 'New Link',
+          edit: 'Editer',
+          remove: 'Supprimer',
+          link: 'Créer lien',
           select: 'Select',
-          cancel: 'Cancel',
-          copy: 'Copy'
+          cancel: 'Annuler',
+          copy: 'Duppliquer'
         }
       "
       @editNode="openNodeEdit"

@@ -10,18 +10,18 @@
           placeholder="width"
           value="150"
           style="display:none;"
-        /><br />
+        />
         <VInput
           type="number"
           v-model="newNode.height"
           placeholder="height"
           value="50"
           style="display:none;"
-        /><br />
+        />
         <VInput style="display:none" v-model="newNode.shape" placeholder="shape" value="rectangle"/>
         <br />
         <VButton @click="ok">OK</VButton>
-        <VButton class="danger" @click="cancel">Cancel</VButton>
+        <VButton class="danger" @click="cancel">Annuler</VButton>
       </div>
     </transition>
   </VModal>

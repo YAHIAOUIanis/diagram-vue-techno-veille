@@ -6,7 +6,7 @@
         Q ${point.x} ${point.y}
         ${calcDestination().x} ${calcDestination().y}`
       "
-      :stroke="link.color || '#ffeaa7'"
+      :stroke="link.color || 'black'"
       stroke-width="3"
       fill="none"
       :stroke-dasharray="definePattern(link.pattern)"
@@ -27,7 +27,7 @@
       refX="5"
       refY="5"
     >
-      <polygon points="0,1.5 0,8.5 10,5 " :fill="link.color || '#ffeaa7'" />
+      <polygon points="0,1.5 0,8.5 10,5 " :fill="link.color || '#black'" />
     </marker>
     <g v-if="editable">
       <line
@@ -191,7 +191,7 @@ export default {
       this.$emit("editLink", {
         id: this.link.id,
         content: {
-          color: this.link.color || "#ffeaa7",
+          color: this.link.color || "black",
           pattern: this.link.pattern || "solid",
           arrow: this.link.arrow || "none"
         }
