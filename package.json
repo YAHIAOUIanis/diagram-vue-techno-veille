@@ -22,6 +22,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "pug": "^2.0.4",
     "vue": "^2.6.11"
   },
   "devDependencies": {

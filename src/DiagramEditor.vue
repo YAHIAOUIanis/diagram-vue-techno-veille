@@ -1,22 +1,13 @@
 <template>
   <div id="editor">
-    <VButton v-if="!editable" @click="editable = true">Edit</VButton>
+    <VButton v-if="!editable" @click="editable = true">Editer</VButton>
     <span v-else>
-      <VButton @click="openModal">New Node</VButton>
-      <VButton @click="endEdit">End</VButton>
-    </span>
-    <VButton @click="openInputModal">Import/Export</VButton>
-    <VButton @click="downloadSVG">Download SVG</VButton>
-    <VButton @click="isAskClearDiagram = true">Clear Diagram</VButton>
-    <VSelect v-model="scale">
-      <option value="0.5">Small</option>
-      <option value="1" selected>Medium</option>
-      <option value="2">Large</option>
-    </VSelect>
-    <VCkbox v-model="isFluid"> Toggle fluid </VCkbox>
-    <VCkbox v-model="showGrid" @changed="changeGrid"> Show grid </VCkbox>
+      <VButton @click="openModal">Nouvelle classe</VButton>      
+    </span>    
+    <VButton @click="downloadSVG">Télécharger SVG</VButton>
+    <VButton @click="isAskClearDiagram = true" style="background-color:red;">Supprimer le diagramme</VButton>        
     <AskModal :isActive="isAskClearDiagram" @ok="clearDiagram" @cancel="cancel">
-      Do you wanna clear the Diagram?
+      Voulez vous Supprimer le diagramme ?
     </AskModal>
     <EditNodeModal
       :node="{ content: {} }"
@@ -128,7 +119,7 @@ export default {
       isEditLinkModalActive: false,
       isInputModalActive: false,
       editable: false,
-      isFluid: false,
+      isFluid: true,
       tmpNode: {
         id: "",
         shape: "rectangle",
@@ -148,7 +139,7 @@ export default {
           arrow: "none"
         }
       },
-      showGrid: false,
+      showGrid: true,
       isAskClearDiagram: false
     };
   },
