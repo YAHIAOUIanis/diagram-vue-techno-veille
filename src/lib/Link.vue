@@ -27,7 +27,7 @@
       refX="5"
       refY="5"
     >
-      <polygon points="0,1.5 0,8.5 10,5 " :fill="link.color || '#black'" />
+      <polygon points="10,10 10,8.5 10,5 " :fill="link.color || '#black'" />
     </marker>
     <g v-if="editable">
       <line
